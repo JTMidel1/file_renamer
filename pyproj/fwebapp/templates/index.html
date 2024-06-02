@@ -1,0 +1,153 @@
+<!--
+  <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>File Renamer</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">File Renamer</h1>
+      {% if request.args.get('success') %}
+      <div class="alert alert-success" role="alert">
+        Files have been successfully renamed.
+      </div>
+      {% elif request.args.get('error') %}
+      <div class="alert alert-danger" role="alert">
+        An error occurred: {{ request.args.get('error') }}
+      </div>
+      {% endif %}
+      <form action="/rename_files" method="post">
+        <div class="form-group">
+          <label for="path">Path</label>
+          <input type="text" class="form-control" id="path" name="path" required>
+        </div>
+        <div class="form-group">
+          <label for="file_name">General File Name</label>
+          <input type="text" class="form-control" id="file_name" name="file_name" required>
+        </div>
+        <div class="form-group">
+          <label for="file_format">File Format (e.g., .jpg, .txt)</label>
+          <input type="text" class="form-control" id="file_format" name="file_format" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Rename Files</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+-->
+  <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>File Renamer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+      h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+      }
+      .btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+      }
+      .btn-primary {
+        background-color: #007bff;
+      }
+      
+      .alert {
+        padding: 10px 20px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+      .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+      }
+      .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+      .mt-5 {
+        background-color: #d4edda;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-style: groove;
+        border-color: #c09a9d;
+        padding: 2px 4px;
+        border-width: 5px 10px;
+        border-radius: 15px;
+        text-align: center;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin
+        
+
+    
+        
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">File Renamer</h1>
+      {% if request.args.get('success') %}
+      <div class="alert alert-success" role="alert">
+        Files have been successfully renamed.
+      </div>
+      {% elif request.args.get('error') %}
+      <div class="alert alert-danger" role="alert">
+        An error occurred: {{ request.args.get('error') }}
+      </div>
+      {% endif %}
+      <form action="/rename_files" method="post">
+        <div class="form-group">
+          <label for="path">Path</label>
+          <input type="text" class="form-control" id="path" name="path" required>
+        </div>
+        <div class="form-group">
+          <label for="file_name">General File Name</label>
+          <input type="text" class="form-control" id="file_name" name="file_name" required>
+        </div>
+        <div class="form-group">
+          <label for="file_format">File Format (e.g., .jpg, .txt)</label>
+          <input type="text" class="form-control" id="file_format" name="file_format" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Rename Files</button>
+      </form>
+    </div>
+  </body>
+</html>
